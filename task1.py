@@ -28,7 +28,7 @@ class TodoList:
     def __init__(self):
         self.tasks = []
 
-    # ---------------- ADD TASK ----------------
+    
 
     def add_task(self):
         description = input("Enter task description: ").strip()
@@ -59,7 +59,7 @@ class TodoList:
 
         print("Task added successfully.")
 
-    # ---------------- VIEW TASKS ----------------
+    
 
     def view_tasks(self):
 
@@ -74,8 +74,7 @@ class TodoList:
 
         print("================================")
 
-    # ---------------- COMPLETE TASK ----------------
-
+   
     def complete_task(self):
 
         if len(self.tasks) == 0:
@@ -105,8 +104,7 @@ class TodoList:
         except ValueError:
             print("Please enter a valid number.")
 
-    # ---------------- MARK PENDING ----------------
-
+  
     def mark_pending(self):
 
         if len(self.tasks) == 0:
@@ -132,7 +130,7 @@ class TodoList:
         except ValueError:
             print("Please enter a valid number.")
 
-    # ---------------- DELETE TASK ----------------
+    
 
     def delete_task(self):
 
@@ -162,7 +160,7 @@ class TodoList:
         except ValueError:
             print("Please enter a valid number.")
 
-    # ---------------- EDIT TASK ----------------
+   
 
     def edit_task(self):
 
@@ -199,7 +197,7 @@ class TodoList:
         except ValueError:
             print("Please enter a valid number.")
 
-    # ---------------- SEARCH TASK ----------------
+    
 
     def search_task(self):
 
@@ -213,8 +211,7 @@ class TodoList:
 
         found = False
 
-        print("\n========== SEARCH RESULTS ==========")
-
+       
         for index, task in enumerate(self.tasks, start=1):
 
             if keyword in task.description.lower():
@@ -225,9 +222,7 @@ class TodoList:
         if not found:
             print("No matching tasks found.")
 
-        print("====================================")
-
-    # ---------------- STATISTICS ----------------
+       
 
     def show_statistics(self):
 
@@ -243,7 +238,7 @@ class TodoList:
             else:
                 pending += 1
 
-        print("\n========== TASK STATISTICS ==========")
+       
         print(f"Total Tasks     : {total}")
         print(f"Completed Tasks : {completed}")
         print(f"Pending Tasks   : {pending}")
@@ -254,10 +249,7 @@ class TodoList:
         else:
             print("Completion Rate : 0%")
 
-        print("=====================================")
-
-    # ---------------- CLEAR ALL TASKS ----------------
-
+       
     def clear_tasks(self):
 
         if len(self.tasks) == 0:
@@ -277,16 +269,14 @@ class TodoList:
         else:
             print("Operation cancelled.")
 
-    # ---------------- MENU ----------------
 
     def menu(self):
 
         while True:
 
-            print("\n================================")
+            
             print("       TO-DO LIST APPLICATION")
-            print("================================")
-
+           
             print("1. Add Task")
             print("2. View Tasks")
             print("3. Mark Task as Completed")
@@ -298,7 +288,7 @@ class TodoList:
             print("9. Clear All Tasks")
             print("10. Exit")
 
-            print("================================")
+            
 
             choice = input("Enter your choice: ")
 
@@ -337,8 +327,6 @@ class TodoList:
                 print("Invalid choice. Please try again.")
 
 
-# Create object
 todo = TodoList()
 
-# Start application
 todo.menu()
